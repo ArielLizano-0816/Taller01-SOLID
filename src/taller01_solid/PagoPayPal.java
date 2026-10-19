@@ -1,25 +1,21 @@
 package taller01_solid;
-
-
-import taller01_solid.Pago;
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 /**
  *
  * @author ariel
  */
-public class PagoPayPal extends Pago{
-    private boolean loggedIn; //conexión a cuenta PayPal
-    
+public class PagoPayPal implements MedioPago {
+    private final String emailCuenta;
+
+    public PagoPayPal(String emailCuenta) {
+        this.emailCuenta = emailCuenta;
+    }
+
     @Override
-    public void realizarCobro(double monto){
-        if(!loggedIn){
-            return;
+    public boolean realizarCobro(double monto) {
+        if (monto <= 0) {
+            throw new IllegalArgumentException("El monto debe ser mayor a 0");
         }
-        //cargar el monto de compra al medio de pago
+        System.out.println("Cobrando $" + monto + " vía PayPal a la cuenta " + emailCuenta);
+        return true;
     }
 }

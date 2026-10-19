@@ -8,19 +8,29 @@ package taller01_solid;
  *
  * @author ariel
  */
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Compra {
-    private Pago pago;
-    private PagoPayPal pagoPayPal;
-    private List articulos;
+    	private final List<Articulo> articulos = new ArrayList<>();
     
-    public Compra(Pago pago){
-        //inicializaciones
-    }
-    
-    public void agregarArticulo(Articulo articulo){
-        //agregar un articulo a la compra
-    }
-    public void removerArticulo(Articulo articulo){
-        //remover un articulo a la compra
-    }
+   	public void agregarArticulo(Articulo articulo){
+        	articulos.add(articulo);
+   	}
+   	public void removerArticulo(Articulo articulo){
+       		//remover un articulo a la compra
+		articulos.remove(articulo);
+	}
+
+	public double calcularSubtotal(){
+		double total = 0;
+		for(Articulo a : articulos){
+			total += a.getPrecio();
+		}
+		return total;
+	}
+	public List<Articulo> getArticulos(){
+		return Collections.unmodifiableLIst(articulos);
+	}
 }
