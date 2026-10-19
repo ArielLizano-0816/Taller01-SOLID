@@ -1,0 +1,10 @@
+# NetBeans
+/nbproject/private/
+/build/
+/nb-configuration.xml
+/dist/
+/target/
+
+# Otros archivos del sistema operativo
+.DS_Store
+Thumbs.db
