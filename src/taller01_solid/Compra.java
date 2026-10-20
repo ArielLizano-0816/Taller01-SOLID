@@ -31,6 +31,6 @@ public class Compra {
 		return total;
 	}
 	public List<Articulo> getArticulos(){
-		return Collections.unmodifiableLIst(articulos);
+		return Collections.unmodifiableList(articulos);
 	}
 }

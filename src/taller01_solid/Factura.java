@@ -1,3 +1,5 @@
+package taller01_solid;
+
 public class Factura {
     private final double subtotal;
     private final double impuestos;

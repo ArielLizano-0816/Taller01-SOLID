@@ -1,3 +1,5 @@
+package taller01_solid;
+
 public class CalculadoraIVA implements CalculadoraImpuestos {
     private final double tasa;
 

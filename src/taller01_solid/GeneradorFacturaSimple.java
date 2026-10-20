@@ -1,3 +1,5 @@
+package taller01_solid;
+
 public class GeneradorFacturaSimple implements GeneradorFactura {
     @Override
     public Factura generar(Compra compra, double impuestos) {

@@ -1,3 +1,5 @@
+package taller01_solid;
+
 public class ProcesadorCompra {
     private final MedioPago medioPago;
     private final CalculadoraImpuestos calculadoraImpuestos;

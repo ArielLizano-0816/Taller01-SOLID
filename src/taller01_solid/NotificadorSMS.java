@@ -1,3 +1,5 @@
+package taller01_solid;
+
 public class NotificadorSMS implements Notificador {
     @Override
     public void enviar(String destinatario, String mensaje) {

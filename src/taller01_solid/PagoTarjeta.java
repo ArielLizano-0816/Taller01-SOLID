@@ -1,3 +1,5 @@
+package taller01_solid;
+
 public class PagoTarjeta implements MedioPago {
     private final String numeroTarjeta;
 
